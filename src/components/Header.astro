@@ -1,14 +1,28 @@
+---
+const para = [
+  {
+    text1: "Coding",
+    text2: "mostly in JavaScript",
+  },
+  {
+    text1: "Designing",
+    text2: "mostly in Figma",
+  },
+];
+---
+
 <header
   class="w-full flex flex-col-reverse gap-5 md:flex-row md:items-center md:justify-between"
 >
   <div class="text-lg text-black">
     <h1 class="mb-1 text-2xl">Matteo Tagliatti</h1>
-    <p>
-      Coding <span class="text-neutral-500">mostly in JavaScript.</span>
-    </p>
-    <p>
-      Designing <span class="text-neutral-500">in Figma.</span>
-    </p>
+    {
+      para.map((item) => (
+        <p>
+          {item.text1} <span class="text-neutral-500">{item.text2}.</span>
+        </p>
+      ))
+    }
   </div>
   <img
     width="110"
