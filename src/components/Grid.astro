@@ -1,0 +1,63 @@
+---
+const items = [
+  {
+    title: "DeliveBoo",
+    subtitle: "Laravel, Vue.js, MySQL",
+    img: "https://raw.githubusercontent.com/matteotagliatti/deliveboo/master/screen.png",
+    link: "https://github.com/matteotagliatti/deliveboo",
+    date: "2022",
+  },
+  {
+    title: "Arcade Games",
+    subtitle: "JavaScript",
+    img: "https://raw.githubusercontent.com/matteotagliatti/arcade-games/master/common/logo.png",
+    link: "https://github.com/matteotagliatti/arcade-games",
+    date: "2022",
+  },
+  {
+    title: "My old website",
+    subtitle: "Jekyll and JQuery",
+    img: "https://raw.githubusercontent.com/matteotagliatti/arcade-games/master/common/logo.png",
+    link: "https://github.com/matteotagliatti/matteotagliatti.it-v1",
+    date: "2021",
+  },
+  {
+    title: "Centro Sposi",
+    subtitle: "Wordpress",
+    img: "https://i1.wp.com/centrosposiparadiso.it/new/wp-content/uploads/2020/09/cropped-cropped-logo-grande-def.png",
+    link: "https://centrosposiparadiso.it/",
+    date: "2020",
+  },
+];
+---
+
+<main class="flex flex-col gap-4 md:grid md:md:grid-cols-2">
+  {
+    items.map((item) => (
+      <a
+        href={item.link}
+        target="_blank"
+        class="group relative flex flex-col items-center rounded-xl bg-white px-8 py-16 transition duration-300 hover:shadow hover:-translate-y-0.5 sm:px-16"
+      >
+        <svg
+          class="w-5 h-5 absolute right-4 top-4 text-neutral-400 group-hover:text-neutral-500 group-hover:-rotate-45 transition duration-300"
+          viewBox="0 0 15 15"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+        >
+          <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" />
+        </svg>
+        <p class="absolute left-4 top-4 text-sm text-neutral-400">
+          {item.date}
+        </p>
+        <img
+          class="mb-8 w-30 h-24 object-contain rounded-full"
+          src={item.img}
+          alt="title"
+        />
+        <h3 class="text-center mb-1 text-2xl">{item.title}</h3>
+        <p class="text-neutral-500 text-sm text-center">{item.subtitle}</p>
+      </a>
+    ))
+  }
+</main>
