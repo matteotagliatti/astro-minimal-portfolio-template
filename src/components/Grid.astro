@@ -1,34 +1,5 @@
 ---
-const items = [
-  {
-    title: "DeliveBoo",
-    subtitle: "Laravel, Vue.js, MySQL",
-    img: "https://raw.githubusercontent.com/matteotagliatti/deliveboo/master/screen.png",
-    link: "https://github.com/matteotagliatti/deliveboo",
-    date: "2022",
-  },
-  {
-    title: "Arcade Games",
-    subtitle: "JavaScript",
-    img: "https://raw.githubusercontent.com/matteotagliatti/arcade-games/master/common/logo.png",
-    link: "https://github.com/matteotagliatti/arcade-games",
-    date: "2022",
-  },
-  {
-    title: "My old website",
-    subtitle: "Jekyll and JQuery",
-    img: "https://raw.githubusercontent.com/matteotagliatti/arcade-games/master/common/logo.png",
-    link: "https://github.com/matteotagliatti/matteotagliatti.it-v1",
-    date: "2021",
-  },
-  {
-    title: "Centro Sposi",
-    subtitle: "Wordpress",
-    img: "https://i1.wp.com/centrosposiparadiso.it/new/wp-content/uploads/2020/09/cropped-cropped-logo-grande-def.png",
-    link: "https://centrosposiparadiso.it/",
-    date: "2020",
-  },
-];
+const { items } = Astro.props;
 ---
 
 <main class="flex flex-col gap-4 md:grid md:md:grid-cols-2">

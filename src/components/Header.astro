@@ -1,23 +1,14 @@
 ---
-const para = [
-  {
-    text1: "Coding",
-    text2: "mostly in JavaScript",
-  },
-  {
-    text1: "Designing",
-    text2: "mostly in Figma",
-  },
-];
+const { title, profilePic, subtitles } = Astro.props;
 ---
 
 <header
   class="w-full flex flex-col-reverse gap-5 md:flex-row md:items-center md:justify-between"
 >
   <div class="text-lg text-black">
-    <h1 class="mb-1 text-2xl">Matteo Tagliatti</h1>
+    <h1 class="mb-1 text-2xl">{title}</h1>
     {
-      para.map((item) => (
+      subtitles.map((item) => (
         <p>
           {item.text1} <span class="text-neutral-500">{item.text2}.</span>
         </p>
@@ -25,10 +16,8 @@ const para = [
     }
   </div>
   <img
-    width="110"
-    height="110"
-    class="rounded-full"
-    src="https://avatars.githubusercontent.com/u/52333519"
-    alt="Matteo Tagliatti"
+    class="w-28 h-28 rounded-full object-cover"
+    src={profilePic}
+    alt={title}
   />
 </header>

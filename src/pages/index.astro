@@ -4,12 +4,77 @@ import Header from "../components/Header.astro";
 import Border from "../components/Border.astro";
 import Grid from "../components/Grid.astro";
 import Footer from "../components/Footer.astro";
+
+// Header
+const title = "Your Name";
+const profilePic = "https://placekitten.com/200/300";
+const subtitles = [
+  {
+    text1: "Coding",
+    text2: "mostly in JavaScript",
+  },
+  {
+    text1: "Designing",
+    text2: "mostly in Figma",
+  },
+];
+
+// Grid
+const items = [
+  {
+    title: "DeliveBoo",
+    subtitle: "Laravel, Vue.js, MySQL",
+    img: "https://raw.githubusercontent.com/matteotagliatti/deliveboo/master/screen.png",
+    link: "https://github.com/matteotagliatti/deliveboo",
+    date: "2022",
+  },
+  {
+    title: "Arcade Games",
+    subtitle: "JavaScript",
+    img: "https://raw.githubusercontent.com/matteotagliatti/arcade-games/master/common/logo.png",
+    link: "https://github.com/matteotagliatti/arcade-games",
+    date: "2022",
+  },
+  {
+    title: "My old website",
+    subtitle: "Jekyll and JQuery",
+    img: "https://raw.githubusercontent.com/matteotagliatti/arcade-games/master/common/logo.png",
+    link: "https://github.com/matteotagliatti/matteotagliatti.it-v1",
+    date: "2021",
+  },
+  {
+    title: "Centro Sposi",
+    subtitle: "Wordpress",
+    img: "https://i1.wp.com/centrosposiparadiso.it/new/wp-content/uploads/2020/09/cropped-cropped-logo-grande-def.png",
+    link: "https://centrosposiparadiso.it/",
+    date: "2020",
+  },
+];
+
+// Footer
+const footerLinks = [
+  {
+    website: "github.com",
+    name: "matteotagliatti",
+    link: "https://github.com/matteotagliatti",
+  },
+  {
+    website: "linkedin.com",
+    name: "matteotagliatti",
+    link: "https://www.linkedin.com/in/matteotagliatti/",
+  },
+  {
+    website: "instagram.com",
+    name: "matteotagliatti",
+    link: "https://www.instagram.com/matteotagliatti/",
+  },
+];
 ---
 
-<Layout title="Matteo Tagliatti">
-  <Header />
+<Layout title={title}>
+  <Header title={title} profilePic={profilePic} subtitles={subtitles} />
   <Border />
-  <Grid />
+  <Grid items={items} />
   <Border />
-  <Footer />
+  <Footer footerLinks={footerLinks} />
 </Layout>
