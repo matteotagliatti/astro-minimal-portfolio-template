@@ -1,4 +1,13 @@
 ---
+export interface Props {
+  title: string;
+  profilePic: string;
+  subtitles: Array<{
+    text1: string;
+    text2: string;
+  }>;
+}
+
 const { title, profilePic, subtitles } = Astro.props;
 ---
 

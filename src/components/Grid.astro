@@ -1,4 +1,14 @@
 ---
+export interface Props {
+  items: Array<{
+    title: string;
+    subtitle: string;
+    img: string;
+    link: string;
+    date: number;
+  }>;
+}
+
 const { items } = Astro.props;
 ---
 

@@ -1,4 +1,12 @@
 ---
+export interface Props {
+  footerLinks: Array<{
+    website: string;
+    name: string;
+    link: string;
+  }>;
+}
+
 const { footerLinks } = Astro.props;
 ---
 
